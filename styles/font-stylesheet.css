@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "VisbyCF";
+  src: url("/Font/VisbyCF/VisbyCFExtraBoldRegular.eot") format("eot"),
+    url("/Font/VisbyCF/VisbyCFExtraBoldRegular.woff") format("woff"),
+    url("/Font/VisbyCF/VisbyCFExtraBoldRegular.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
