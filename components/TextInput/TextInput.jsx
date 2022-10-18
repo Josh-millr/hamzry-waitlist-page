@@ -2,7 +2,7 @@ import React from "react";
 
 export const TextInput = () => {
   return (
-    <span className="grid">
+    <span className="grid w-full">
       <span className="relative left-[20px] top-[8px] w-[fit-content] bg-[#FFFFFF] px-[8px]">
         <label for="email" className="text-[12px] font-bold text-[#6E6E6E]">
           Email

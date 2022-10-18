@@ -27,7 +27,7 @@ export const Hero = () => {
         <div className="grid place-items-center gap-y-[32px]">
           <form
             onSubmit={formHandler}
-            className="grid place-items-center gap-y-[16px]"
+            className="grid w-full place-items-center gap-y-[16px]"
           >
             <TextInput />
             <button
