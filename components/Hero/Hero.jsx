@@ -1,4 +1,6 @@
 import React from "react";
+import Image from "next/image";
+
 import { TextInput } from "../TextInput/TextInput";
 import { Button } from "../Button/Button";
 
@@ -8,7 +10,7 @@ export const Hero = () => {
   };
 
   return (
-    <div className="grid grid-cols-1 grid-rows-1 lg:grid-cols-2 px-[24px] md:px-[72px]">
+    <div className="grid grid-cols-1 grid-rows-1 px-[24px] md:px-[72px] lg:grid-cols-2">
       {/* Column-1 */}
       <div className="grid grid-cols-1 grid-rows-1 gap-y-[40px] py-[62px] md:gap-y-[46px]">
         <div className="">
@@ -33,14 +35,28 @@ export const Hero = () => {
             <TextInput />
             <Button label="Join the Waitlist" />
           </form>
-          <p className="w-[229px] sm:w-[fit-content] text-center text-[14px] text-[#666666]">
+          <p className="w-[229px] text-center text-[14px] text-[#666666] sm:w-[fit-content]">
             Join the waitlist to get get notified when we launch
           </p>
         </div>
       </div>
 
       {/* Column-2 */}
-      <div className="">{/* For hero image */}</div>
+      <div className="justify-content-center flex md:justify-start">
+        <Image
+          src="/Hero-Image.png"
+          height={34}
+          width={134}
+          alt="Hamzry Logo"
+        />
+        {/* <Image
+          src="/heroImageMobile.png"
+          width={292}
+          height={401}
+          alt=""
+          className="block md:hidden"
+        /> */}
+      </div>
     </div>
   );
 };
