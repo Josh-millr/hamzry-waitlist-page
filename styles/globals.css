@@ -2,10 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: Arial, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@layer utilities {
+  /* Form Rules */
+  @font-face {
+    font-family: "VisbyCF";
+    src: url("/Font/VisbyCF/ExtraBold/VisbyCFExtraBoldRegular.eot")
+        format("eot"),
+      url("/Font/VisbyCF/ExtraBold/VisbyCFExtraBoldRegular.woff") format("woff"),
+      url("/Font/VisbyCF/ExtraBold/VisbyCFExtraBoldRegular.woff2")
+        format("woff2");
+    font-weight: bold;
+    font-style: normal;
+  }
+  /* Declerations */
+  h1,
+  h2,
+  h3 {
+    font-family: VisbyCF, Arial, -apple-system, BlinkMacSystemFont, Segoe UI,
+      Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+      sans-serif;
+  }
+  P {
+    font-family: Arial, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+      Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+      sans-serif;
+  }
 }
