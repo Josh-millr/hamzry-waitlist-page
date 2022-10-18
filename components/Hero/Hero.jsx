@@ -1,5 +1,6 @@
 import React from "react";
 import { TextInput } from "../TextInput/TextInput";
+import { Button } from "../Button/Button";
 
 export const Hero = () => {
   const formHandler = (e) => {
@@ -7,9 +8,9 @@ export const Hero = () => {
   };
 
   return (
-    <div className="grid">
+    <div className="grid grid-cols-1 grid-rows-1 lg:grid-cols-2 px-[24px] md:px-[72px]">
       {/* Column-1 */}
-      <div className="grid grid-cols-1 grid-rows-1 gap-y-[40px] py-[62px] px-[24px]">
+      <div className="grid grid-cols-1 grid-rows-1 gap-y-[40px] py-[62px] md:gap-y-[46px]">
         <div className="">
           <div className="flex items-center gap-x-[8px]">
             <span className="hidden h-[1px] w-[26px] bg-[#000000] md:block" />
@@ -18,7 +19,7 @@ export const Hero = () => {
             </h4>
             <span className=" h-[1px] w-[26px] bg-[#000000]" />
           </div>
-          <h1 className="text-[40px] font-bold capitalize leading-tight tracking-tight">
+          <h1 className="max-w-[638px] text-[40px] font-bold capitalize leading-tight tracking-tight">
             <span className="text-[#009879]">Connecting you </span>
             with GIGs worth your skills
             <span className="text-[40px] text-[#009879]">.</span>
@@ -27,17 +28,12 @@ export const Hero = () => {
         <div className="grid place-items-center gap-y-[32px]">
           <form
             onSubmit={formHandler}
-            className="grid w-full place-items-center gap-y-[16px]"
+            className="grid w-full place-items-center items-end gap-y-[16px] sm:flex sm:gap-x-[16px]"
           >
             <TextInput />
-            <button
-              type="submit"
-              className="w-[fit-content] rounded-[8px] bg-[#009879] px-[32px] py-[16px] text-[14px] font-bold text-[#FFFFFF]"
-            >
-              Join the Waitlist
-            </button>
+            <Button label="Join the Waitlist" />
           </form>
-          <p className="max-w-[229px] text-center text-[14px] text-[#666666]">
+          <p className="w-[229px] sm:w-[fit-content] text-center text-[14px] text-[#666666]">
             Join the waitlist to get get notified when we launch
           </p>
         </div>
