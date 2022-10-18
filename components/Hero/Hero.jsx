@@ -42,20 +42,14 @@ export const Hero = () => {
       </div>
 
       {/* Column-2 */}
-      <div className="justify-content-center flex md:justify-start">
+      <div className="flex justify-center md:justify-start">
         <Image
-          src="/Hero-Image.png"
-          height={34}
-          width={134}
-          alt="Hamzry Logo"
-        />
-        {/* <Image
-          src="/heroImageMobile.png"
+          src="/business-done.svg"
           width={292}
           height={401}
           alt=""
           className="block md:hidden"
-        /> */}
+        />
       </div>
     </div>
   );
