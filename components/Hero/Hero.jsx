@@ -13,10 +13,10 @@ export const Hero = () => {
         <div className="">
           <div className="flex items-center gap-x-[8px]">
             <span className="hidden h-[1px] w-[26px] bg-[#000000] md:block" />
-            <p className="text-[14px] font-bold tracking-wider">
+            <h4 className="text-[12px] font-bold tracking-widest">
               THE ULTIMATE GIG PLATFORM FOR NIGERIA
-            </p>
-            {/* <span className=" h-[1px] w-[26px] bg-[#000000]" /> */}
+            </h4>
+            <span className=" h-[1px] w-[26px] bg-[#000000]" />
           </div>
           <h1 className="text-[40px] font-bold capitalize leading-tight tracking-tight">
             <span className="text-[#009879]">Connecting you </span>
@@ -27,7 +27,7 @@ export const Hero = () => {
         <div className="grid place-items-center gap-y-[32px]">
           <form
             onSubmit={formHandler}
-            className="grid place-items-center gap-y-[16px]"
+            className="grid w-full place-items-center gap-y-[16px]"
           >
             <TextInput />
             <button
