@@ -11,7 +11,7 @@ export const TextInput = () => {
       <input
         type="text"
         id="email"
-        className="h-[56px] w-full rounded-[8px] border-[1px] border-[#A3A3A3] px-[16px] outline-none focus:bg-[#e6fffa]"
+        className="h-[62px] w-full rounded-[8px] border-[1px] border-[#A3A3A3] px-[16px] outline-none focus:bg-[#e6fffa]"
         placeholder="eg. joshuae.miller100@gmail.com"
       />
     </span>
