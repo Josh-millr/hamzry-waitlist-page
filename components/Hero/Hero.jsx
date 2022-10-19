@@ -44,7 +44,7 @@ export const Hero = () => {
       {/* Column-2 */}
       <div className="flex justify-center md:justify-start">
         <Image
-          src="/business-done.svg"
+          src="/hamzry-mobile.svg"
           width={292}
           height={401}
           alt=""
