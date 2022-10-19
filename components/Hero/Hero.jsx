@@ -43,13 +43,14 @@ export const Hero = () => {
 
       {/* Column-2 */}
       <div className="flex justify-center md:justify-start">
-        <Image
-          src="/hamzry-mobile.svg"
-          width={292}
-          height={401}
-          alt=""
-          className="block md:hidden"
-        />
+        {/* Mobile Specific Image */}
+        <span className="block sm:hidden">
+          <Image src="/hamzry-mobile.svg" width={292} height={401} alt="" />
+        </span>
+        {/* Desktop Specific Image */}
+        <span className="hidden sm:block">
+          <Image src="/Hero-Image.svg" width={546} height={452} alt="" />
+        </span>
       </div>
     </div>
   );
