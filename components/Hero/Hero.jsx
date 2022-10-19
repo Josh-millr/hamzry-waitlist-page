@@ -32,7 +32,10 @@ export const Hero = () => {
             onSubmit={formHandler}
             className="grid w-full place-items-center items-end gap-y-[16px] sm:flex sm:gap-x-[16px]"
           >
-            <TextInput />
+            <TextInput
+              label="Email Address"
+              placeholder="eg. joshuae.miller100@gmail.com"
+            />
             <Button label="Join the Waitlist" />
           </form>
           <p className="w-[229px] text-center text-[14px] text-[#666666] sm:w-[fit-content]">
