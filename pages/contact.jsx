@@ -98,6 +98,35 @@ const Contact = () => {
           </form>
         </div>
       </div>
+      <div className="grid grid-cols-1 grid-rows-1 place-items-center gap-y-[24px] py-[24px] text-center lg:hidden">
+        <span className="h-[1px] w-[50%] bg-[#E8E8E8]" />
+        <div className="grid gap-y-[8px]">
+          <h2 className="text-[20px] font-bold">Follow us on social media.</h2>
+          <p className="text-[14px]">
+            You can send us a message too, we are so happy to respond.
+          </p>
+        </div>
+        <div className="">
+          <ul className="grid grid-cols-2 grid-rows-2 gap-[16px]">
+            <li className="flex gap-x-[8px]">
+              <Instagram />
+              <p className="text-[14px]">Instagram@Hamzry</p>
+            </li>
+            <li className="flex gap-x-[8px]">
+              <Linkedin />
+              <p className="text-[14px]">Linkedin@Hamzry</p>
+            </li>
+            <li className="flex gap-x-[8px]">
+              <Twitter />
+              <p className="text-[14px]">Twitter@Hamzry</p>
+            </li>
+            <li className="flex gap-x-[8px]">
+              <Facebook />
+              <p className="text-[14px]">Facebook@Hamzry</p>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 };
