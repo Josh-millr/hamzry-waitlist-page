@@ -41,13 +41,13 @@ const Contact = () => {
         <div className="grid hidden gap-y-[8px] lg:block">
           <h2 className="text-[20px] font-bold">Follow us on social media.</h2>
           <p className="text-[14px]">
-            You can send us a message too, we’re so happy to respond.
+            You can send us a message too, we are so happy to respond.
           </p>
         </div>
         {/*  */}
         {/* Add the respective links */}
         <div className="hidden w-[fit-content] lg:block">
-          <ul className="grid grid-cols-2 grid-rows-2 gap-[16px]">
+          <ul className="grid grid-cols-2 grid-rows-2 gap-[16px] font-bold underline decoration-[#009879]">
             <li className="flex gap-x-[8px]">
               <Instagram />
               <p className="text-[14px]">Instagram@Hamzry</p>
@@ -107,7 +107,7 @@ const Contact = () => {
           </p>
         </div>
         <div className="">
-          <ul className="grid grid-cols-2 grid-rows-2 gap-[16px]">
+          <ul className="grid grid-cols-2 grid-rows-2 gap-[16px] font-bold underline decoration-[#009879]">
             <li className="flex gap-x-[8px]">
               <Instagram />
               <p className="text-[14px]">Instagram@Hamzry</p>
