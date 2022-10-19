@@ -6,6 +6,7 @@ export const TopNav = () => {
   let [currPath, setCurrPath] = useState("/");
 
   useEffect(() => setCurrPath(window.location.pathname), [setCurrPath]);
+  console.log(currPath);
   return (
     <nav>
       <div className="flex w-full items-center justify-between py-[40px] px-[24px] sm:py-[40px] sm:px-[72px]">
