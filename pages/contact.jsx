@@ -106,7 +106,7 @@ const Contact = () => {
             You can send us a message too, we are so happy to respond.
           </p>
         </div>
-        <div className="w-[fit-content]">
+        <div className="">
           <ul className="grid grid-cols-2 grid-rows-2 gap-[16px]">
             <li className="flex gap-x-[8px]">
               <Instagram />
