@@ -77,7 +77,7 @@ const Contact = () => {
             matter to us.
           </h1>
           <p className="text-center text-[14px] sm:text-[16px] lg:m-[0] lg:text-start">
-            Let us know what you'll like to see on our product.
+            Let us know what you like to see on our product.
           </p>
         </div>
         <div className="">
