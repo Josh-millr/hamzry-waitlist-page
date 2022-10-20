@@ -4,6 +4,8 @@ export { Hero } from "./Hero/Hero";
 export { TextInput } from "./TextInput/TextInput";
 export { TextArea } from "./TextArea/TextArea";
 export { Button } from "./Button/Button";
+export { Modal } from "./Modal/Modal";
+export { Popup } from "./Popup/Popup";
 
 // Icons
 export { Instagram } from "./Icons/Instagram";
