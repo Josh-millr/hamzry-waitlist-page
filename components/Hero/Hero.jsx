@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import MailchimpSubscribe from "react-mailchimp-subscribe";
 
 import { TextInput } from "../TextInput/TextInput";
 import { Button } from "../Button/Button";
 
 export const Hero = () => {
-  const formHandler = (e) => {
-    e.preventDefault();
+  let [emailValue, setEmailValue] = useState("");
+  const MAILCHIP_URL = process.env.MAILCHIP_URL;
+
+  const getInputValue = (value) => {
+    setEmailValue(value);
   };
 
   return (
@@ -28,16 +32,31 @@ export const Hero = () => {
           </h1>
         </div>
         <div className="grid place-items-center gap-y-[32px]">
-          <form
-            onSubmit={formHandler}
-            className="grid w-full place-items-center items-end gap-y-[16px] sm:flex sm:gap-x-[16px]"
-          >
-            <TextInput
-              label="Email Address"
-              placeholder="eg. joshuae.miller100@gmail.com"
-            />
-            <Button label="Join the Waitlist" />
-          </form>
+          {/* Subscription Form */}
+          <MailchimpSubscribe
+            url={MAILCHIP_URL}
+            render={({ subscribe, status, message }) => {
+              console.log("The status is:", status);
+              console.log("The message is:", message);
+              return (
+                <form
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    subscribe(emailValue);
+                  }}
+                  className="grid w-full place-items-center items-end gap-y-[16px] sm:flex sm:gap-x-[16px]"
+                >
+                  <TextInput
+                    getValue={getInputValue}
+                    label="Email Address"
+                    placeholder="eg. joshuae.miller100@gmail.com"
+                  />
+                  <Button label="Join the Waitlist" />
+                </form>
+              );
+            }}
+          />
+
           <p className="w-[229px] text-center text-[14px] text-[#666666] sm:w-[fit-content]">
             Join the waitlist to get get notified when we launch
           </p>
