@@ -45,7 +45,6 @@ const Contact = () => {
           </p>
         </div>
         {/*  */}
-        {/* Add the respective links */}
         <div className="hidden w-[fit-content] lg:block">
           <ul className="grid grid-cols-2 grid-rows-2 gap-[16px] font-bold underline decoration-[#009879]">
             <li className="flex gap-x-[8px]">
