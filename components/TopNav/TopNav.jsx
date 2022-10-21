@@ -8,7 +8,7 @@ export const TopNav = () => {
   let changeRoute = (route) => {
     setCurrPath(route);
   };
-  console.log(currPath);
+
   return (
     <nav>
       <div className="flex w-full items-center justify-between py-[40px] px-[24px] sm:py-[40px] sm:px-[72px]">
@@ -24,14 +24,13 @@ export const TopNav = () => {
         </Link>
         {/* Column-2 */}
         <ul className="flex gap-x-[24px] text-[14px] font-bold">
-          {/* // TODO: Add active and in-active state style */}
           <li>
             <Link href="">Blog</Link>
           </li>
           <li
             className=""
             onClick={() => changeRoute("/contact")}
-            style={{ color: currPath === "/contact" && "#009879" }}
+            style={{ color: currPath === "/contact" ? "#009879": "#000000" }}
           >
             <Link href="/contact">Contact</Link>
           </li>

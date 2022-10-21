@@ -5,6 +5,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <div className="mx-auto max-w-[1296px]">
       <TopNav />
+      {/* App root */}
       <Component {...pageProps} />
     </div>
   );
