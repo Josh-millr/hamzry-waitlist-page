@@ -11,13 +11,13 @@ const CustomForm = ({ status, message, onValidated }) => {
   let [emailValue, setEmailValue] = useState("");
   const getInputValue = (value) => setEmailValue(value);
 
-  let { setShowModal } = useContext(StoreContext);
+  let { setSubscriptionModal } = useContext(StoreContext);
 
   console.log(status);
-
+  
   useEffect(() => {
-    if (status === "error") setShowModal(true);
-  }, [status, setShowModal, setEmailValue]);
+    if (status === "error") setSubscriptionModal(true);
+  }, [status, setSubscriptionModal, setEmailValue]);
 
   let handleForm = (e) => {
     e.preventDefault();

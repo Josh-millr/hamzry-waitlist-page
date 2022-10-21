@@ -1,9 +1,5 @@
-import React, { useContext } from "react";
-import { Hero } from "../components/index";
-
-import { StoreContext } from "../lib/Store";
-import { Modal } from "../components/index";
-import { SubscriptionPopup } from "../components/";
+import React from "react";
+import { Hero, SubscriptionPopup, ContactPopup } from "../components/index";
 
 export default function Home() {
   return (

@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 
 import { TextInput } from "../TextInput/TextInput";
 import { Button } from "../Button/Button";
 import { TextArea } from "../TextArea/TextArea";
+
+import { StoreContext } from "../../lib/Store";
 
 // Custom Form
 const CustomForm = ({ status, message, onValidated }) => {
@@ -11,6 +13,12 @@ const CustomForm = ({ status, message, onValidated }) => {
   let [fullname, setFullName] = useState("");
   let [optMessage, setOptMessage] = useState("");
 
+  let { contactModal ,setContactModal } = useContext(StoreContext);
+
+  useEffect(() => {
+    if (status === "error") setContactModal(true);
+  }, [status, setContactModal, setEmailValue]);
+console.log(contactModal)
   let handleForm = (e) => {
     e.preventDefault();
 
@@ -23,6 +31,7 @@ const CustomForm = ({ status, message, onValidated }) => {
       });
   };
   console.log(status);
+
   return (
     <form
       onSubmit={(e) => handleForm(e)}
