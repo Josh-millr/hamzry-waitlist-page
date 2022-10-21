@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer utilities {
+@layer base {
   /* Form Rules */
   @font-face {
     font-family: "VisbyCF";
@@ -40,5 +40,10 @@
   h6 {
     font-family: VisbyCF, Arial;
     font-weight: 500;
+  }
+}
+@layer utilities {
+  .navItemActive {
+    color: #009879;
   }
 }
