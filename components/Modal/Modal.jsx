@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
+import { StoreContext } from "../../lib/Store";
 
 export const Modal = () => {
-  
-  return <div className="absolute h-full w-full bg-black z-10 opacity-[0.6]"></div>;
+  let { showModal, setShowModal } = useContext(StoreContext);
+  const modalHandler = () => setShowModal(false);
+
+  return (
+    <div
+      onClick={() => modalHandler()}
+      className={`${showModal === true ? "modal" : ""}`}
+    />
+  );
 };
