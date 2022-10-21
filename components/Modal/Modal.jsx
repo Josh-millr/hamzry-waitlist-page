@@ -8,7 +8,7 @@ export const Modal = () => {
   return (
     <div
       onClick={() => modalHandler()}
-      className={`${showModal === true ? "modal" : ""}`}
+      className={`${showModal === true && "modal"}`}
     />
   );
 };

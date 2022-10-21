@@ -6,7 +6,7 @@ export { TextInput } from "./TextInput/TextInput";
 export { TextArea } from "./TextArea/TextArea";
 export { Button } from "./Button/Button";
 export { Modal } from "./Modal/Modal";
-export { Popup } from "./Popup/Popup";
+export { SubscriptionPopup, ContactPopup } from "./Popup/Popup";
 
 // Icons
 export { Instagram } from "./Icons/Instagram";

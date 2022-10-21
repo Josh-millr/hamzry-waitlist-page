@@ -1,20 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 
 import { TextInput } from "../TextInput/TextInput";
 import { Button } from "../Button/Button";
+
+import { StoreContext } from "../../lib/Store";
 
 // Custom Form
 const CustomForm = ({ status, message, onValidated }) => {
   let [emailValue, setEmailValue] = useState("");
   const getInputValue = (value) => setEmailValue(value);
 
-  console.log(status)
+  let { setShowModal } = useContext(StoreContext);
+
+  console.log(status);
+
+  useEffect(() => {
+    if (status === "error") setShowModal(true);
+  }, [status, setShowModal, setEmailValue]);
 
   let handleForm = (e) => {
     e.preventDefault();
 
-    // Chech email value
+    // check and submit email
     emailValue.indexOf("@") > -1 &&
       onValidated({
         EMAIL: emailValue,
