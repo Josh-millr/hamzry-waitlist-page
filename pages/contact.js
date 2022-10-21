@@ -8,6 +8,7 @@ import {
   TextInput,
   Button,
   TextArea,
+  ContactForm,
 } from "../components/index";
 
 const Contact = () => {
@@ -38,7 +39,7 @@ const Contact = () => {
           </div>
         </div>
         {/*  */}
-        <div className="grid hidden gap-y-[8px] lg:block">
+        <div className=" hidden gap-y-[8px] lg:grid">
           <h2 className="text-[20px] font-bold">Follow us on social media.</h2>
           <p className="text-[14px]">
             You can send us a message too, we are so happy to respond.
@@ -80,21 +81,8 @@ const Contact = () => {
           </p>
         </div>
         <div className="">
-          <form
-            onSubmit={formHandler}
-            className="grid w-full place-items-center items-end gap-y-[8px] sm:gap-x-[16px] lg:place-items-start"
-          >
-            <TextInput label="Full Name" placeholder="eg. samuel maddu oge " />
-            <TextInput
-              label="Email Address"
-              placeholder="eg. joshuae.miller100@gmail.com"
-            />
-            <TextArea
-              label="Optional Message"
-              placeholder="Your message to us (optional"
-            />
-            <Button label="Submit" />
-          </form>
+          {/* // Add the contact form here */}
+          <ContactForm />
         </div>
       </div>
       <div className="grid grid-cols-1 grid-rows-1 place-items-center gap-y-[24px] py-[24px] text-center lg:hidden">

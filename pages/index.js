@@ -2,8 +2,8 @@ import { Hero } from "../components/index";
 
 export default function Home() {
   return (
-    <div className="wrapper">
+    <main>
       <Hero />
-    </div>
+    </main>
   );
 }

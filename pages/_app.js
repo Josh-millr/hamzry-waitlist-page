@@ -1,13 +1,21 @@
 import "../styles/globals.css";
-import { TopNav } from "../components/index";
+import React, { useContext } from "react";
+
+import { Modal, TopNav } from "../components/index";
+import { PopupContext } from "../lib/PopupContext";
 
 function MyApp({ Component, pageProps }) {
+  let popup = useContext(PopupContext);
+
   return (
-    <div className="mx-auto max-w-[1296px]">
-      <TopNav />
-      {/* App root */}
-      <Component {...pageProps} />
-    </div>
+    <PopupContext>
+      <div className="mx-auto max-w-[1296px]">
+        <Modal />
+        <TopNav />
+        {/* App root */}
+        <Component {...pageProps} />
+      </div>
+    </PopupContext>
   );
 }
 

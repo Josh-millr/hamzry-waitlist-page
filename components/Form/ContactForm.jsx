@@ -3,13 +3,13 @@ import MailchimpSubscribe from "react-mailchimp-subscribe";
 
 import { TextInput } from "../TextInput/TextInput";
 import { Button } from "../Button/Button";
+import { TextArea } from "../TextArea/TextArea";
 
 // Custom Form
 const CustomForm = ({ status, message, onValidated }) => {
   let [emailValue, setEmailValue] = useState("");
-  const getInputValue = (value) => setEmailValue(value);
-
-  console.log(status)
+  let [fullname, setFullName] = useState("");
+  let [optMessage, setOptMessage] = useState("");
 
   let handleForm = (e) => {
     e.preventDefault();
@@ -18,28 +18,43 @@ const CustomForm = ({ status, message, onValidated }) => {
     emailValue.indexOf("@") > -1 &&
       onValidated({
         EMAIL: emailValue,
+        MERGE1: fullname,
+        MERGE2: optMessage,
       });
   };
-
+  console.log(status);
   return (
     <form
       onSubmit={(e) => handleForm(e)}
-      className="grid w-full place-items-center items-end gap-y-[16px] sm:flex sm:gap-x-[16px]"
+      className="grid w-full place-items-center items-end gap-y-[8px] sm:gap-x-[16px] lg:place-items-start"
     >
+      <TextInput
+        label="Full Name"
+        type="text"
+        placeholder="eg. samuel maddu oge "
+        getValue={setFullName}
+        value={fullname}
+      />
       <TextInput
         label="Email Address"
         type="email"
         placeholder="eg. joshuae.miller100@gmail.com"
-        getValue={getInputValue}
+        getValue={setEmailValue}
         value={emailValue}
       />
-      <Button label="Join the Waitlist" />
+      <TextArea
+        label="Optional Message"
+        placeholder="Your message to us (optional"
+        getValue={setOptMessage}
+        value={optMessage}
+      />
+      <Button label="Submit" />
     </form>
   );
 };
 
 // Mailchimp Form
-export const SubscriptionForm = () => {
+export const ContactForm = () => {
   let u = "5749b703f6ec75b763ba46600";
   let id = "b80962623e";
 

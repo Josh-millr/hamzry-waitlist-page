@@ -1,6 +1,7 @@
 export { TopNav } from "./TopNav/TopNav";
 export { Hero } from "./Hero/Hero";
 
+export { ContactForm } from "./Form/ContactForm";
 export { TextInput } from "./TextInput/TextInput";
 export { TextArea } from "./TextArea/TextArea";
 export { Button } from "./Button/Button";
