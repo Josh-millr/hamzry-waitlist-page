@@ -6,7 +6,6 @@ import { StoreContext } from "../../lib/Store";
 export const SubscriptionPopup = () => {
   let { showModal, setShowModal } = useContext(StoreContext);
   const modalHandler = () => setShowModal(false);
-  // hidePopup  h-[270px] w-[327px]
   return (
     <div
       onClick={() => modalHandler()}
