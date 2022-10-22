@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import {
   Instagram,
   Facebook,
@@ -47,21 +48,57 @@ const Contact = () => {
           {/*  */}
           <div className="hidden w-[fit-content] lg:block">
             <ul className="grid grid-cols-2 grid-rows-2 gap-[16px] font-bold underline decoration-[#009879]">
-              <li className="flex gap-x-[8px]">
-                <Instagram />
-                <p className="text-[14px]">Instagram@Hamzry</p>
+              {/* Instagram Link */}
+              <li>
+                <a
+                  href="https://www.instagram.com/hamzrydigital/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="flex gap-x-[8px]">
+                    <Instagram />
+                    <p className="text-[14px]">Instagram@Hamzry</p>
+                  </div>
+                </a>
               </li>
-              <li className="flex gap-x-[8px]">
-                <Linkedin />
-                <p className="text-[14px]">Linkedin@Hamzry</p>
+              {/* Linkedin link */}
+              <li>
+                <a
+                  href="https://ng.linkedin.com/company/hamzry?trk=public_post_feed-actor-name"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="flex gap-x-[8px]">
+                    <Linkedin />
+                    <p className="text-[14px]">Linkedin@Hamzry</p>
+                  </div>
+                </a>
               </li>
-              <li className="flex gap-x-[8px]">
-                <Twitter />
-                <p className="text-[14px]">Twitter@Hamzry</p>
+              {/* Twitter Link */}
+              <li>
+                <a
+                  href="https://twitter.com/HamzryDigital"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="flex gap-x-[8px]">
+                    <Twitter />
+                    <p className="text-[14px]">Twitter@Hamzry</p>
+                  </div>
+                </a>
               </li>
-              <li className="flex gap-x-[8px]">
-                <Facebook />
-                <p className="text-[14px]">Facebook@Hamzry</p>
+              {/* Facebook Link */}
+              <li>
+                <a
+                  href="https://web.facebook.com/hamzry?hc_ref=ARQxqpt0adoinuu6kdJm-tcB2zrEKGV-cgbS_wACj0eRNHx8Xa0hXYb-56c6Z6IpVI0&fref=nf&__xts__[0]=68.ARAyk2sNxUrr2DvJizGpr9zy8rUPB4Mu2yRd5ZqJZUY9Ro58fH---cUZZ0j-7EhsTiWhmq-egCL_isryqaoVgJoB_H6jBEjcxXLUoGM2Yp60p452dVX0657TmsoSbdVFJtUjPB3nxY0yJEphnP8ubD-qU6L2uPPOi3xqxlMBsDRBgOblajnsLbfByeCvmLdbpHRU2y9dlnzmsV6048isHSp2D2ZmiIOwTGkNHnNcXTfnsEfo6MkivQhaGCAMTX7-Z0kZdOqF9okzdlBOcKDOhkCzMMaVpySAdQbhczAOWA3lZOzrU5Y&_rdc=1&_rdr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="flex gap-x-[8px]">
+                    <Facebook />
+                    <p className="text-[14px]">Facebook@Hamzry</p>
+                  </div>
+                </a>
               </li>
             </ul>
           </div>
@@ -96,21 +133,56 @@ const Contact = () => {
           </div>
           <div className="">
             <ul className="grid grid-cols-2 grid-rows-2 gap-[16px] font-bold underline decoration-[#009879]">
-              <li className="flex gap-x-[8px]">
-                <Instagram />
-                <p className="text-[14px]">Instagram@Hamzry</p>
+              <li>
+                <a
+                  href="https://www.instagram.com/hamzrydigital/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="flex gap-x-[8px]">
+                    <Instagram />
+                    <p className="text-[14px]">Instagram@Hamzry</p>
+                  </div>
+                </a>
               </li>
-              <li className="flex gap-x-[8px]">
-                <Linkedin />
-                <p className="text-[14px]">Linkedin@Hamzry</p>
+              {/* Linkedin link */}
+              <li>
+                <a
+                  href="https://ng.linkedin.com/company/hamzry?trk=public_post_feed-actor-name"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="flex gap-x-[8px]">
+                    <Linkedin />
+                    <p className="text-[14px]">Linkedin@Hamzry</p>
+                  </div>
+                </a>
               </li>
-              <li className="flex gap-x-[8px]">
-                <Twitter />
-                <p className="text-[14px]">Twitter@Hamzry</p>
+              {/* Twitter Link */}
+              <li>
+                <a
+                  href="https://twitter.com/HamzryDigital"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="flex gap-x-[8px]">
+                    <Twitter />
+                    <p className="text-[14px]">Twitter@Hamzry</p>
+                  </div>
+                </a>
               </li>
-              <li className="flex gap-x-[8px]">
-                <Facebook />
-                <p className="text-[14px]">Facebook@Hamzry</p>
+              {/* Facebook Link */}
+              <li>
+                <a
+                  href="https://web.facebook.com/hamzry?hc_ref=ARQxqpt0adoinuu6kdJm-tcB2zrEKGV-cgbS_wACj0eRNHx8Xa0hXYb-56c6Z6IpVI0&fref=nf&__xts__[0]=68.ARAyk2sNxUrr2DvJizGpr9zy8rUPB4Mu2yRd5ZqJZUY9Ro58fH---cUZZ0j-7EhsTiWhmq-egCL_isryqaoVgJoB_H6jBEjcxXLUoGM2Yp60p452dVX0657TmsoSbdVFJtUjPB3nxY0yJEphnP8ubD-qU6L2uPPOi3xqxlMBsDRBgOblajnsLbfByeCvmLdbpHRU2y9dlnzmsV6048isHSp2D2ZmiIOwTGkNHnNcXTfnsEfo6MkivQhaGCAMTX7-Z0kZdOqF9okzdlBOcKDOhkCzMMaVpySAdQbhczAOWA3lZOzrU5Y&_rdc=1&_rdr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div className="flex gap-x-[8px]">
+                    <Facebook />
+                    <p className="text-[14px]">Facebook@Hamzry</p>
+                  </div>
+                </a>
               </li>
             </ul>
           </div>

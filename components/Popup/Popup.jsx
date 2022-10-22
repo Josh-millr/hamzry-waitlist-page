@@ -12,7 +12,7 @@ export const SubscriptionPopup = () => {
       onClick={() => modalHandler()}
       className={`${subscriptionModal === true ? "popupWrapper" : "hidePopup"}`}
     >
-      <div className="grid grid-cols-1 grid-rows-1 place-items-center gap-y-[16px] rounded-[16px] bg-white px-[34px] py-[62px]">
+      <div className="grid grid-cols-1 h-[fit-content] w-[fit-content] grid-rows-1 place-items-center gap-y-[16px] rounded-[16px] bg-white px-[34px] py-[62px]">
         {/* Column 1 */}
         <div className="flex justify-center">
           <Images src="/tick.svg" height={52} width={52} alt="tick icon" />
