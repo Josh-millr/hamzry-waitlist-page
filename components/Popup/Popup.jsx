@@ -21,7 +21,7 @@ export const SubscriptionPopup = () => {
         <div className="grid grid-cols-1 grid-rows-1 items-center justify-center text-center text-[#000000]">
           <h2 className="text-[16px]">Thank you for joining our waitlist</h2>
           <p className="max-w-[232px] text-[14px]">
-            You wll be the first to know when we go live
+            You will be the first to know when we go live
           </p>
         </div>
       </div>
