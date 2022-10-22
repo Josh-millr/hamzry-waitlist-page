@@ -17,13 +17,12 @@ const CustomForm = ({ status, message, onValidated }) => {
 
   useEffect(() => {
     if (status === "success" || status === "error") setLoading(false);
-    if (status === "error") setSubscriptionModal(true);
+    if (status === "success") setSubscriptionModal(true);
   }, [status, setSubscriptionModal, setEmailValue, setLoading]);
 
   let handleForm = (e) => {
     e.preventDefault();
 
-    // check and submit email
     emailValue.indexOf("@") > -1 &&
       onValidated({
         EMAIL: emailValue,
@@ -54,8 +53,8 @@ const CustomForm = ({ status, message, onValidated }) => {
 
 // Mailchimp Form
 export const SubscriptionForm = () => {
-  let u = "5749b703f6ec75b763ba46600";
-  let id = "b80962623e";
+  let u = process.env.MAILCHIMP_U;
+  let id = process.env.MAILCHIMP_ID;
 
   const postUrl = `https://hamzry.us8.list-manage.com/subscribe/post?u=${u}&id=${id}`;
 
