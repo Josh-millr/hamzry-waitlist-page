@@ -70,4 +70,7 @@
   .hidePopup {
     display: none;
   }
+  .buttonDisabled {
+    background-color: #637e78;
+  }
 }

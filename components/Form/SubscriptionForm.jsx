@@ -11,13 +11,14 @@ const CustomForm = ({ status, message, onValidated }) => {
   let [emailValue, setEmailValue] = useState("");
   const getInputValue = (value) => setEmailValue(value);
 
-  let { setSubscriptionModal } = useContext(StoreContext);
+  let { setSubscriptionModal, loading, setLoading } = useContext(StoreContext);
 
   console.log(status);
-  
+
   useEffect(() => {
+    if (status === "success" || status === "error") setLoading(false);
     if (status === "error") setSubscriptionModal(true);
-  }, [status, setSubscriptionModal, setEmailValue]);
+  }, [status, setSubscriptionModal, setEmailValue, setLoading]);
 
   let handleForm = (e) => {
     e.preventDefault();
@@ -27,6 +28,7 @@ const CustomForm = ({ status, message, onValidated }) => {
       onValidated({
         EMAIL: emailValue,
       });
+    setLoading(true);
   };
 
   return (
@@ -41,7 +43,11 @@ const CustomForm = ({ status, message, onValidated }) => {
         getValue={getInputValue}
         value={emailValue}
       />
-      <Button label="Join the Waitlist" />
+      <Button
+        label="Join the Waitlist"
+        isFilled={emailValue.length > 1 ? true : false}
+        isLoading={loading}
+      />
     </form>
   );
 };

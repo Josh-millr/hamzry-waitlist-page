@@ -13,12 +13,14 @@ const CustomForm = ({ status, message, onValidated }) => {
   let [fullname, setFullName] = useState("");
   let [optMessage, setOptMessage] = useState("");
 
-  let { contactModal ,setContactModal } = useContext(StoreContext);
+  let { contactModal, setContactModal, setLoading, loading } =
+    useContext(StoreContext);
 
   useEffect(() => {
+    if (status === "success" || status === "error") setLoading(false);
     if (status === "error") setContactModal(true);
-  }, [status, setContactModal, setEmailValue]);
-console.log(contactModal)
+  }, [status, setContactModal, setEmailValue, setLoading]);
+
   let handleForm = (e) => {
     e.preventDefault();
 
@@ -29,6 +31,7 @@ console.log(contactModal)
         MERGE1: fullname,
         MERGE2: optMessage,
       });
+    setLoading(true);
   };
   console.log(status);
 
@@ -57,7 +60,15 @@ console.log(contactModal)
         getValue={setOptMessage}
         value={optMessage}
       />
-      <Button label="Submit" />
+      <Button
+        label="Submit"
+        isFilled={
+          emailValue.length > 1 && fullname.length > 1 && optMessage.length > 1
+            ? true
+            : false
+        }
+        isLoading={loading}
+      />
     </form>
   );
 };
