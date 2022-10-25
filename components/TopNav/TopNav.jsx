@@ -9,11 +9,6 @@ export const TopNav = () => {
 
   let routes = [
     {
-      id: "1521HJN2135",
-      name: "Blog",
-      route: "/",
-    },
-    {
       id: "SADJHVA634SDA",
       name: "Contact",
       route: "/contact",
